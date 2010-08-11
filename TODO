@@ -5,6 +5,7 @@ FUNCTIONALITIES
 3. Up-to-date information on student profiles (database driven)
 4. Student and staffs login accounts, (Students can update their profile
    profile information at their convenient time.)
+5. Comments on posted news, (like it/hate it). using django.contrib.comments.moderation
 
 
 SYSTEM STRUCTURE
