@@ -15,7 +15,7 @@ class NewsAdmin(admin.ModelAdmin):
 		}),
         ('Advanced options', {
             'classes': ('collapse',),
-            'fields': ('date_posted','expiry_date')
+            'fields': ('expiry_date',)
         }),
     )
 

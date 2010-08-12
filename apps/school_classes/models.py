@@ -16,9 +16,8 @@ class SchoolClass(models.Model):
     '''
         A Class of student, in accordance to forms.
     '''
-    name = models.CharField(max_length=128, unique=True,\
-                            help_text='name of the class')
-    subjects = models.ManyToManyField(Subject)
+    name = models.CharField(max_length=128, unique=True, help_text='name of the class')
+    subjects = models.ManyToManyField('Subject')
     
     class Meta:
         verbose_name = 'Class'
@@ -27,3 +26,4 @@ class SchoolClass(models.Model):
     def __unicode__(self):
         return self.name
     
+

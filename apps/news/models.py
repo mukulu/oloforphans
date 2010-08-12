@@ -13,7 +13,7 @@ class News(models.Model):
 	photo = models.ImageField(upload_to=settings.PHOTO_DIR,null=True, blank=True)
 	content = models.TextField(help_text="The news contents goes here")
 	author = models.CharField(max_length=128)
-	date_posted = models.DateTimeField(default = datetime.now)
+	date_posted = models.DateTimeField(default = datetime.now,auto_now=True)
 	expiry_date = models.DateTimeField(default = endtime, help_text="The date news should be considered expired")
 	
 	def __unicode__(self):
