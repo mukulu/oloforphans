@@ -2,14 +2,10 @@ from django.contrib import admin
 from apps.pages.models import Page, Content, Category
 
 class PageAdmin(admin.ModelAdmin):
-	pass
-
-class ContentAdmin(admin.ModelAdmin):
-	pass
+	list_display=("heading","name","category","author","date_posted")
 
 class CategoryAdmin(admin.ModelAdmin):
-	pass
+	list_display=("name","description")
 
 admin.site.register(Page,PageAdmin)
-admin.site.register(Content,ContentAdmin)
 admin.site.register(Category,CategoryAdmin)
