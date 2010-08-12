@@ -100,4 +100,5 @@ INSTALLED_APPS = (
     'apps.news',
     'apps.pages',
     'apps.students',
+    'apps.school_classes'
 )

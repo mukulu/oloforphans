@@ -2,7 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 
-# Create your models here.
+from apps.school_classes.models import SchoolClass
+
+# 1. why is this class here..??
+# 2. A user class as it has enough info.
+# 	lets just leave most relevant stuff here usable to both.
+# 3. Should the student really be able to login.? and do what.?
 class Person(models.Model):
 	"""
 		Holds information about people in the system
@@ -27,7 +32,7 @@ class Student(Person):
 		if we put entrance year, we might need to know if he/she's o-level
 		or a-level to know which form he is.
 	"""
-	form = models.CharField(max_length=128,help_text="Form/Stream you are in.")
+	form = models.ForeignKey(SchoolClass,help_text="Form/Stream you are in.")
 	favorite_subject = models.CharField(max_length=128,help_text="Favorite subject")
 	future_dream = models.TextField(null=True,blank=True,help_text="Dreams of your future")
 	parents = models.TextField(null=True,blank=True,help_text="Names of your parents")

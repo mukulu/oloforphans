@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.students.models import *
+from apps.students.models import Person, Student
 
 class PersonAdmin(admin.ModelAdmin):
 	list_display=("photo","user","birthdate","birthplace")

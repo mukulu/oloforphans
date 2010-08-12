@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.pages.models import *
+from apps.pages.models import Page, Content, Category
 
 class PageAdmin(admin.ModelAdmin):
 	pass

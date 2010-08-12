@@ -1,16 +1,25 @@
 from datetime import datetime
 
 from django.db import models
-from apps.pages.models import Content
+from django.conf import settings
+from apps.news.utils import endtime
 
-class News(Content):
+class News(models.Model):
 	"""
-		News share similarity with contents of page app. 
+		News, shows news to be viewed. 
 	"""
-	expiry_date = models.DateTimeField(help_text="The date news should be considered expired")
+	heading = models.CharField(max_length=128, unique=True)
+	# TODO put a default image.
+	photo = models.ImageField(upload_to=settings.PHOTO_DIR,null=True, blank=True)
+	content = models.TextField(help_text="The news contents goes here")
+	author = models.CharField(max_length=128)
+	date_posted = models.DateTimeField(default = datetime.now)
+	expiry_date = models.DateTimeField(default = endtime, help_text="The date news should be considered expired")
+	
 	def __unicode__(self):
-		return self.title
+		return self.heading
+	
 	class Meta:
-			ordering = ['title']
+			ordering = ['-date_posted','heading']
 			verbose_name_plural = 'News'
 

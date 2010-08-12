@@ -23,6 +23,9 @@ manage.py
 apps/
 	Holds collection of applications installed in the system.
 
+apps/urls.py
+	Apps specific urls to be linked to the main urls.py
+
 templates/
 	Holds template pages for the website
 	
