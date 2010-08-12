@@ -25,5 +25,5 @@ class SchoolClass(models.Model):
         verbose_name_plural = 'Classes'
     
     def __unicode__(self):
-        self.name
+        return self.name
     
