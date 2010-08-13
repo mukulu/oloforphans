@@ -3,6 +3,7 @@ from apps.school_classes.models import SchoolClass, Subject
 
 class SchoolClassAdmin(admin.ModelAdmin):
     list_display=("name",)
+    filter_horizontal=("subjects",)
 
 class SubjectAdmin(admin.ModelAdmin):
     list_display=("name","description")
