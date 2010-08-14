@@ -23,6 +23,18 @@ manage.py
 apps/
 	Holds collection of applications installed in the system.
 
+apps/news
+	Holds daily posted news by admin or members of staff with
+	preferable priviledges.
+apps/students
+	Holds and manage informations about students and their accounts
+	in the system.
+apps/pages
+	Holds and manage contents of pages interlinked accross the website.
+apps/school_classes
+	Holds and manage classes offered at schools and informations about
+	those classes.
+
 apps/urls.py
 	Apps specific urls to be linked to the main urls.py
 
