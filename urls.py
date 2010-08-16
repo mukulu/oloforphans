@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
 from django.contrib import admin
-import apps
+#import apps
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     # (r'^apps/pages/', include('apps.pages.urls')),
     # (r'^apps/students/', include('apps.students.urls')),
     # (r'^apps/classes/', include('apps.school_classes.urls')),
+    (r'^js/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'static/javascripts'}),
     (r'^admin/', include(admin.site.urls)),
 )

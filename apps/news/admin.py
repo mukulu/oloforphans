@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from apps.news.models import News
 
 class NewsAdmin(admin.ModelAdmin):
@@ -18,6 +19,9 @@ class NewsAdmin(admin.ModelAdmin):
             'fields': ('expiry_date',)
         }),
     )
+	
+	class Media:
+		js = ('/js/tiny_mce/tiny_mce.js', '/js/tiny_mce/textareas.js',)
 
 
 
