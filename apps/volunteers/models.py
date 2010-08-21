@@ -18,5 +18,8 @@ class Volunteer(models.Model):
     
     date_registered = models.DateTimeField(default=datetime.now())
     
+    class Meta:
+        ordering = ['-date_registered']
+    
     def __unicode__(self):
         return '%s %s' % (self.first_name, self.last_name)

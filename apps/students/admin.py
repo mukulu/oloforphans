@@ -2,25 +2,26 @@ from django.contrib import admin
 from apps.students.models import Person, Student
 
 class PersonAdmin(admin.ModelAdmin):
-	list_display=("photo","user","birthdate","birthplace")
+	list_display=("photo","birthdate","birthplace")
 
 class StudentAdmin(admin.ModelAdmin):
-	list_display=("photo","user","birthdate","birthplace","form")
+	list_display=("photo","birthdate","birthplace","form")
 	fieldsets = (
 		('Basic User Information', {
-			'fields': ('user','birthdate','birthplace','form','photo')
+			'classes': ['extrapretty'],
+			'fields': ('first_name','last_name','birthdate','birthplace','form','photo')
 			}),
-		('Relationships', {
+		('Guardianship', {
 			'classes': ('collapse',),
-			'fields': ('parents','siblings','guardians',)
+			'fields': ('parents','guardians',)
 		}),
 		('Hobbies and Favorites', {
 			'classes': ('collapse',),
-			'fields':('hobbies','favorite_subject','future_dream')
+			'fields':('future_dream','hobbies','favorite_subject',)
 		}),
 		('Detailed informations', {
 			'classes': ('collapse',),
-			'fields':('about_her','explanation','quotes')
+			'fields':('about_her',)
 		}),
 	)
 

@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from apps.school_classes.models import SchoolClass, Subject
 
 class SchoolClassAdmin(admin.ModelAdmin):

@@ -1,13 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.conf import settings
 
 from apps.school_classes.models import SchoolClass
 
-# 1. why is this class here..??
-# 2. A user class as it has enough info.
-# 	lets just leave most relevant stuff here usable to both.
-# 3. Should the student really be able to login.? and do what.?
 class Person(models.Model):
 	"""
 		Holds information about people in the system
@@ -16,15 +11,17 @@ class Person(models.Model):
 		@I have used PHOTO_DIR declared in settings.py, not sure if it
 		 needs any imports to use settings from settings.py
 	"""
-	user = models.ForeignKey(User, unique=True)
+	first_name = models.CharField(max_length=128)
+	last_name = models.CharField(max_length=128)
 	photo = models.ImageField(null=True,upload_to=settings.PHOTO_DIR, help_text="Recent Photo")
 	birthdate = models.DateField(help_text="Your date of birth")
-	birthplace = models.CharField(max_length=128, help_text="Place you were born")
-	hobbies = models.TextField(null=True, blank=True,help_text="Activity or interesest you do for pleasure")
-	siblings = models.TextField(null=True,blank=True,help_text="Your kinsman, next of kin, persons of near relationship")
+	birthplace = models.CharField(max_length=128, help_text="Place you were born")	
+	
+	class Meta:
+		ordering = ['first_name','last_name',]
 	
 	def __unicode__(self):
-		return self.user.username
+		return '%s %s' % (self.first_name, self.last_name)
 
 class Student(Person):
 	"""
@@ -35,8 +32,7 @@ class Student(Person):
 	form = models.ForeignKey(SchoolClass,help_text="Form/Stream you are in.")
 	favorite_subject = models.CharField(null=True,blank=True,max_length=128,help_text="Favorite subject")
 	future_dream = models.TextField(null=True,blank=True,help_text="Dreams of your future")
-	parents = models.TextField(null=True,blank=True,help_text="Names of your parents")
-	guardians = models.TextField(null=True,blank=True,help_text="Names of your guardians")
-	explanation = models.TextField(null=True,blank=True,help_text="How she came to bethsaida")
+	parents = models.CharField(max_length=128,null=True,blank=True)
+	guardians = models.CharField(max_length=128,null=True,blank=True,help_text="Names of your guardians")
 	about_her = models.TextField(null=True,blank=True,help_text="About her")
-	quotes = models.TextField(null=True,blank=True,help_text="Quotes from student")
+	hobbies = models.TextField(null=True, blank=True,help_text="Activity or interests you do for pleasure")
