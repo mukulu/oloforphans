@@ -16,6 +16,7 @@ class Volunteer(models.Model):
     middle_name = models.CharField(null=True,blank=True,max_length=128)
     last_name = models.CharField(max_length=128,help_text="Volunteer's last or surname")
     e_mail = models.EmailField(null=True,blank=True,max_length=128,help_text="Volunteer's E-mail address")
+    phone_number = models.CharField(null=True,blank=True,max_length=128,help_text="Volunteer's current phone number")
     photo = models.ImageField(null=True,blank=True,upload_to=settings.PHOTO_DIR, help_text="Recent Photo")
     sex = models.CharField(max_length=3, choices=SEX_CHOICES)
     nationality = models.CharField(max_length=128)
