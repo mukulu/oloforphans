@@ -11,14 +11,14 @@
 		</title>
 		
 		{% block stylesheets %}
-		<link rel="stylesheet" href="/statics/stylesheets/layout.css" type="text/css" />
+		<link rel="stylesheet" href="/static/stylesheets/layout.css" type="text/css" />
 		{% endblock %}
 		
 		{% block javascripts %}
-		<script type="text/javascript" src="/statics/javascripts/jquery-1.4.1.min.js"></script>
-		<script type="text/javascript" src="/statics/javascripts/jquery.slidepanel.setup.js"></script>
-		<script type="text/javascript" src="/statics/javascripts/jquery.cycle.min.js"></script>
-		<script type="text/javascript" src="/statics/javascripts/jquery.cycle.setup.js"></script>
+		<script type="text/javascript" src="/static/javascripts/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/static/javascripts/jquery.slidepanel.setup.js"></script>
+		<script type="text/javascript" src="/static/javascripts/jquery.cycle.min.js"></script>
+		<script type="text/javascript" src="/static/javascripts/jquery.cycle.setup.js"></script>
 		{% endblock %}
 			
 	</head>
@@ -110,36 +110,37 @@
 		<!-- ####################################################################################################### -->
 		{% block contents %}
 		<div class="wrapper col2">
+<!--
 	  <div id="featured_slide">
-	    <div class="featured_box"><a href="#"><img src="images/demo/450x300.gif" alt="" /></a>
+	    <div class="featured_box"><a href="#"><img src="/static/images/demo/450x300.gif" alt="" /></a>
 	      <div class="floater">
 	        <h2>1. Aliquatjusto quisque nam</h2>
 	        <p>Orcimagna rhoncus et a nec antesque sed temportor pellus nibh conseque. Accumstsemper wisi pretium feugiat non ut eleifendrerisque at et condisse sce. Iaculumorci congue nam mollis odio id cras orci vestique euisquet at. Donecconsectetus lacilis ac pellus nam nibh curabitur sed anterdum nectetus adipis. Pretiummagnisse antes nunc pretium convallis tincidunt non at rutrumt.</p>
 	        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 	      </div>
 	    </div>
-	    <div class="featured_box"><a href="#"><img src="images/demo/450x300.gif" alt="" /></a>
+	    <div class="featured_box"><a href="#"><img src="/static/images/demo/450x300.gif" alt="" /></a>
 	      <div class="floater">
 	        <h2>2. Aliquatjusto quisque nam</h2>
 	        <p>Duisvest lacus pellus purus temper maurisus et sodalesuada loreet sapiente et. Quissociis magnisl orci dui nulla ut antesque malesuada sed pede et. Idlacus ridiculisi nec cursus enim ac tur urnar nunc pellus pellenterdum. Necelisi aliquat curabiturpiscing semportortor sed et velit convallis quat adipiscing cursus. Rutrumeget id ipsum et sed maurisuspendimentum auctor siti.</p>
 	        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 	      </div>
 	    </div>
-	    <div class="featured_box"><a href="#"><img src="images/demo/450x300.gif" alt="" /></a>
+	    <div class="featured_box"><a href="#"><img src="/static/images/demo/450x300.gif" alt="" /></a>
 	      <div class="floater">
 	        <h2>3. Dapiensociis temper donec</h2>
 	        <p>Pharetiumurna habitur et enim pellentesque phasellus aliquam nunc quis justo nam. Lobortororci dapibulum ac intesquet ut id sed intesque nec alique congue. Liberoaenec vest maurisus libero pede nisl ligula cursus vitae dis metus. Aeneanaccumsan orci nasce ac pulvinare enim tor quis antesque cumsan in. Justomontesque sem ac dolor iaculum dolor orci elit lacus et vestibulum.</p>
 	        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 	      </div>
 	    </div>
-	    <div class="featured_box"><a href="#"><img src="images/demo/450x300.gif" alt="" /></a>
+	    <div class="featured_box"><a href="#"><img src="/static/images/demo/450x300.gif" alt="" /></a>
 	      <div class="floater">
 	        <h2>4. Dapiensociis temper donec</h2>
 	        <p>Pharetiumurna habitur et enim pellentesque phasellus aliquam nunc quis justo nam. Lobortororci dapibulum ac intesquet ut id sed intesque nec alique congue. Liberoaenec vest maurisus libero pede nisl ligula cursus vitae dis metus. Aeneanaccumsan orci nasce ac pulvinare enim tor quis antesque cumsan in. Justomontesque sem ac dolor iaculum dolor orci elit lacus et vestibulum.</p>
 	        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 	      </div>
 	    </div>
-	    <div class="featured_box"><a href="#"><img src="images/demo/450x300.gif" alt="" /></a>
+	    <div class="featured_box"><a href="#"><img src="/static/images/demo/450x300.gif" alt="" /></a>
 	      <div class="floater">
 	        <h2>5. Nullain convallis ris elis</h2>
 	        <p>Nullamcorpervivamus nisl in sed adipit donec feugiat lor vel velit volutpat. Wisihabitur diculisi ac curabitur cursuspendreris sociis sed eger ipsum condisse laculis. Curabiturid non eu curabitae nibh por nullamcorper at nibh elis fring. Vestnibh congue praesenenatis justo et maecenasceleifend senterdum malesuada at dolor amet. Turisristibulum curabitae eros leo at interd.</p>
@@ -147,6 +148,7 @@
 	      </div>
 	    </div>
 	  </div>
+-->
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col3">
@@ -156,14 +158,14 @@
 	        <ul>
 	          <li>
 	            <h2>Lipsum</h2>
-	            <div class="imgholder"><img src="images/demo/240x130.gif" alt="" /></div>
+	            <div class="imgholder"><img src="/static/images/demo/240x130.gif" alt="" /></div>
 	            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
 	            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et feugiat. Adipisciniap ellentum leo ut consequam.</p>
 	            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 	          </li>
 	          <li class="last">
 	            <h2>Lipsum</h2>
-	            <div class="imgholder"><img src="images/demo/240x130.gif" alt="" /></div>
+	            <div class="imgholder"><img src="/static/images/demo/240x130.gif" alt="" /></div>
 	            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
 	            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et feugiat. Adipisciniap ellentum leo ut consequam.</p>
 	            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
@@ -173,7 +175,7 @@
 	      </div>
 	      <div class="column2">
 	        <h2>About This Free CSS Template !</h2>
-	        <img class="imgl" src="images/demo/imgl.gif" alt="" />
+	        <img class="imgl" src="/static/images/demo/imgl.gif" alt="" />
 	        <p>This is a W3C standards compliant Open Source free CSS template from <a href="http://www.os-templates.com/" title="Open Source Templates">OS Templates</a>.</p>
 	        <p>This template is distributed under a <a target="_blank" rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more free css templates visit <a href="http://www.os-templates.com/">Open Source Templates</a>.</p>
 	        <p>Morbitincidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anterdumnullam interdum eros dui urna consequam ac nisl nullam ligula vestassa.</p>
@@ -184,27 +186,27 @@
 	      <h2>Latest From The School Blog</h2>
 	      <ul>
 	        <li>
-	          <div class="imgholder"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></div>
+	          <div class="imgholder"><a href="#"><img src="/static/images/demo/80x80.gif" alt="" /></a></div>
 	          <p><strong><a href="#">Atnatis dolor tincidunt nulla</a></strong></p>
 	          <p>Feugiatrutrum rhoncus semper enim massa eu intesque ipsum velit orci dolorem. Atnatis dolor tincidunt nulla elit auctortis laculisi elit fauctortor natis loreet.</p>
 	        </li>
 	        <li>
-	          <div class="imgholder"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></div>
+	          <div class="imgholder"><a href="#"><img src="/static/images/demo/80x80.gif" alt="" /></a></div>
 	          <p><strong><a href="#">Atnatis dolor tincidunt nulla</a></strong></p>
 	          <p>Feugiatrutrum rhoncus semper enim massa eu intesque ipsum velit orci dolorem. Atnatis dolor tincidunt nulla elit auctortis laculisi elit fauctortor natis loreet.</p>
 	        </li>
 	        <li>
-	          <div class="imgholder"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></div>
+	          <div class="imgholder"><a href="#"><img src="/static/images/demo/80x80.gif" alt="" /></a></div>
 	          <p><strong><a href="#">Atnatis dolor tincidunt nulla</a></strong></p>
 	          <p>Feugiatrutrum rhoncus semper enim massa eu intesque ipsum velit orci dolorem. Atnatis dolor tincidunt nulla elit auctortis laculisi elit fauctortor natis loreet.</p>
 	        </li>
 	        <li>
-	          <div class="imgholder"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></div>
+	          <div class="imgholder"><a href="#"><img src="/static/images/demo/80x80.gif" alt="" /></a></div>
 	          <p><strong><a href="#">Atnatis dolor tincidunt nulla</a></strong></p>
 	          <p>Feugiatrutrum rhoncus semper enim massa eu intesque ipsum velit orci dolorem. Atnatis dolor tincidunt nulla elit auctortis laculisi elit fauctortor natis loreet.</p>
 	        </li>
 	        <li class="last">
-	          <div class="imgholder"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></div>
+	          <div class="imgholder"><a href="#"><img src="/static/images/demo/80x80.gif" alt="" /></a></div>
 	          <p><strong><a href="#">Atnatis dolor tincidunt nulla</a></strong></p>
 	          <p>Feugiatrutrum rhoncus semper enim massa eu intesque ipsum velit orci dolorem. Atnatis dolor tincidunt nulla elit auctortis laculisi elit fauctortor natis loreet.</p>
 	        </li>

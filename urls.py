@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^js/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'static/javascripts'}),
-    (r'^statics/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
     (r'^admin/', include(admin.site.urls)),
     (r'', include(news_urls)),
 )
