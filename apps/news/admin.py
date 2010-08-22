@@ -6,6 +6,7 @@ class NewsAdmin(admin.ModelAdmin):
 	date_hierarchy = 'date_posted'
 	list_display = ("heading","author","date_posted","expiry_date")
 	list_filter = ('author',)
+	search_fields=['heading','author','content']
 	
 	fieldsets = (
         ('Heading', {

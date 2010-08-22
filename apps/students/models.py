@@ -7,15 +7,14 @@ class Person(models.Model):
 	"""
 		Holds information about people in the system
 		and collection methods to process those informations
-		
-		@I have used PHOTO_DIR declared in settings.py, not sure if it
-		 needs any imports to use settings from settings.py
 	"""
 	first_name = models.CharField(max_length=128)
+	middle_name = models.CharField(null=True,blank=True,max_length=128)
 	last_name = models.CharField(max_length=128)
-	photo = models.ImageField(null=True,upload_to=settings.PHOTO_DIR, help_text="Recent Photo")
-	birthdate = models.DateField(help_text="Your date of birth")
-	birthplace = models.CharField(max_length=128, help_text="Place you were born")	
+	e_mail = models.EmailField(null=True,blank=True,max_length=128)
+	photo = models.ImageField(null=True,blank=True,upload_to=settings.PHOTO_DIR, help_text="Recent Photo")
+	birthdate = models.DateField(null=True,blank=True,help_text="Your date of birth")
+	birthplace = models.CharField(null=True,blank=True,max_length=128, help_text="Place you were born")	
 	
 	class Meta:
 		ordering = ['first_name','last_name',]

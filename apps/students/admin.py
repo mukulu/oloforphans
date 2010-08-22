@@ -5,11 +5,12 @@ class PersonAdmin(admin.ModelAdmin):
 	list_display=("photo","birthdate","birthplace")
 
 class StudentAdmin(admin.ModelAdmin):
-	list_display=("photo","birthdate","birthplace","form")
+	list_display=("first_name","middle_name","last_name","birthdate","birthplace","form")
+	search_fields=['first_name','middle_name','last_name','birthplace',"e_mail"]
 	fieldsets = (
 		('Basic User Information', {
 			'classes': ['extrapretty'],
-			'fields': ('first_name','last_name','birthdate','birthplace','form','photo')
+			'fields': ('first_name','middle_name','last_name','birthdate','birthplace','form','photo')
 			}),
 		('Guardianship', {
 			'classes': ('collapse',),
@@ -25,5 +26,5 @@ class StudentAdmin(admin.ModelAdmin):
 		}),
 	)
 
-admin.site.register(Person,PersonAdmin)
+#admin.site.register(Person,PersonAdmin)
 admin.site.register(Student,StudentAdmin)
