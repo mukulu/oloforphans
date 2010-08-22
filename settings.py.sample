@@ -32,7 +32,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Africa/Dar Es Salaam'
+TIME_ZONE = 'Africa/Dar_es_Salaam'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -52,6 +52,7 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(PROJECT_DIR,'static')
 PHOTO_DIR = os.path.join(MEDIA_ROOT,'photos')
+ICONS_DIR = os.path.join(MEDIA_ROOT,'icons')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -100,5 +101,6 @@ INSTALLED_APPS = (
     'apps.news',
     'apps.pages',
     'apps.students',
-    'apps.school_classes'
+    'apps.school_classes',
+    'apps.volunteers',
 )

@@ -3,32 +3,29 @@ from apps.students.models import Person, Student
 from django.contrib.auth.models import User
 
 class PersonAdmin(admin.ModelAdmin):
-	list_display=("username","firstname","lastname")
-
-class UserInline(admin.TabularInline):
-	model = Student
-	extra = 1
+	list_display=("photo","birthdate","birthplace")
 
 class StudentAdmin(admin.ModelAdmin):
-	pass
-#	list_display=("photo","user","birthdate","birthplace","form")
-#	inlines = [UserInline,]
-#	fieldsets = (
-#        ('Basic User Information', {
-#            'fields': ('birthdate','birthplace','form','photo')
-#        }),
-#        ('Hobbies and Favorites', {
-#			'classes': ('collapse',),
-#			'fields':('hobbies','favorite_subject','future_dream')
-#		}),
-#		('Detailed informations', {
-#			'classes': ('collapse',),
-#			'fields':('about_her','explanation','quotes')
-#		}),
-#        ('Relationships', {
-#            'classes': ('collapse',),
-#            'fields': ('parents','siblings','guardians',)
-#        }),
-#    )
+	list_display=("first_name","middle_name","last_name","birthdate","birthplace","form")
+	search_fields=['first_name','middle_name','last_name','birthplace',"e_mail"]
+	fieldsets = (
+		('Basic User Information', {
+			'classes': ['extrapretty'],
+			'fields': ('first_name','middle_name','last_name','birthdate','birthplace','form','photo')
+			}),
+		('Guardianship', {
+			'classes': ('collapse',),
+			'fields': ('parents','guardians',)
+		}),
+		('Hobbies and Favorites', {
+			'classes': ('collapse',),
+			'fields':('future_dream','hobbies','favorite_subject',)
+		}),
+		('Detailed informations', {
+			'classes': ('collapse',),
+			'fields':('about_her',)
+		}),
+	)
 
+#admin.site.register(Person,PersonAdmin)
 admin.site.register(Student,StudentAdmin)

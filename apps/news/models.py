@@ -16,10 +16,9 @@ class News(models.Model):
 	date_posted = models.DateTimeField(default = datetime.now,auto_now=True)
 	expiry_date = models.DateTimeField(default = endtime, help_text="The date news should be considered expired")
 	
-	def __unicode__(self):
-		return self.heading
-	
 	class Meta:
 			ordering = ['-date_posted','heading']
 			verbose_name_plural = 'News'
-
+	
+	def __unicode__(self):
+		return self.heading
