@@ -22,7 +22,7 @@ class Person(models.Model):
 	def __unicode__(self):
 		return '%s %s' % (self.first_name, self.last_name)
 
-class Student(models.Model):
+class Student(Person):
 	"""
 		@Should we put form for stream, or just an entrance year?
 		if we put entrance year, we might need to know if he/she's o-level
