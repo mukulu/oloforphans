@@ -1,3 +1,19 @@
+Remaining TODOs.
+1. Creation of fancy templates with place holders for displaying the flat pages created by moderator
+   we have the sample already. it's just transformation.
+2. Add news plugin app, that follows django-cms standards to show up in navigation menu.
+3. Add students plugin app, for displaying separate navigation menu of students in django-cms and for ajax
+   random display on any place holder of the template.(like in old site)
+IF WE'RE DONE WITH THIS WE'RE DONE WITH THE PROJECT
+
+IF HE'S WILLING TO POUR IN MORE CASH, (We'll put the following)
+1. To locate the school, incase volunteers want to know where it is, how many miles from where they are
+   this should take long, since plugins are there.
+2. Google search form, for quick access to google search. and results get displayed within same website.
+   like what mint or ubuntu does in their websites.
+3. Image & Gallery management, so they get to keep & edit photos of events online, and pull them anytime
+   they want to incorporate it in their pages.
+
 
 FUNCTIONALITIES
 1. Admin interface ( Updating page contents and enduser profiles by authorized personnel)

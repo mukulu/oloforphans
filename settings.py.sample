@@ -1,5 +1,8 @@
 # Django settings for olof project.
 
+# Gettext stubs
+gettext = lambda s: s
+
 import os.path
 # getting the path of the project
 # to auto-detect the absolute path
@@ -34,8 +37,28 @@ DATABASES = {
 # system time zone.
 TIME_ZONE = 'Africa/Dar_es_Salaam'
 
+SITE_ID = 1
+
+USE_I18N = True
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
+
+LANGUAGES = (
+	('sw', gettext('Swahili')),
+	('en-us', gettext('English(USA)')),
+)
+
+CMS_LANGUAGE_CONF = {
+    'sw':['en-us',],
+    'en-us':['sw',],
+}
+
+CMS_SITE_LANGUAGES = {
+    1:['en-us','sw'],
+    2:['sw','en-us'],
+}
+
+
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
@@ -51,18 +74,22 @@ USE_L10N = True
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(PROJECT_DIR,'static')
+CMS_MEDIA_ROOT = os.path.join(PROJECT_DIR, 'static/cms')
+
 PHOTO_DIR = os.path.join(MEDIA_ROOT,'photos')
 ICONS_DIR = os.path.join(MEDIA_ROOT,'icons')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/admin/media/'
+
+FIXTURE_DIRS = [os.path.join(PROJECT_DIR, 'fixtures')]
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'wl15lk-ky=o&+*7cv2p#hm!s77-p(e7c-(4h2$z70bf0=_)8e%'
@@ -75,11 +102,16 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'cms.middleware.multilingual.MultilingualURLMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'cms.middleware.media.PlaceholderMediaMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'oloforphans.urls'
@@ -91,6 +123,20 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR,'templates')
 )
 
+CMS_TEMPLATES = (
+	('base.html', gettext('default')),
+	('2col.html', gettext('2 Column')),
+	('3col.html', gettext('3 Column')),
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.auth',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'cms.context_processors.media',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -98,9 +144,25 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
-    'apps.news',
-    'apps.pages',
+    'django.contrib.sitemaps',
+    #'apps.news',
+    #'apps.pages',
     'apps.students',
     'apps.school_classes',
     'apps.volunteers',
+    'cms',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
+    'cms.plugins.googlemap',
+    'cms.plugins.flash',
+    'cms.plugins.teaser',
+    'cms.plugins.video',
+    'cms.plugins.inherit',
+    'mptt',
+    'publisher',
+    'menus',
+    #'south',
 )
