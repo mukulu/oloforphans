@@ -14,5 +14,7 @@ urlpatterns = patterns('',
     (r'^js/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'static/javascripts'}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
     (r'^admin/', include(admin.site.urls)),
+    (r'^', include('cms.urls')),
+    (r'^jsi18n/(?P<packages>\S+?)/$', 'django.views.i18n.javascript_catalog'),
     (r'', include(news_urls)),
 )
