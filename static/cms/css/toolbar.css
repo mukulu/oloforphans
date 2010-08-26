@@ -25,7 +25,11 @@
     height:41px;
     width:100%;
     min-width:960px;
+<<<<<<< HEAD
     zoom:1;
+=======
+    zoom:1px;
+>>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
     border-bottom:2px solid #ddd;
     background:url(../images/cms_toolbar.png) repeat-x 0 0;
 }
@@ -352,10 +356,13 @@ span.cms_toolbar_icon.cms_toolbar_state-icon.del
     overflow-x:hidden;
 }
 
+<<<<<<< HEAD
 *+html .cms_toolbar_submenuselect .cms_toolbar_submenu{
 	height:200px;
 }
 
+=======
+>>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
 .cms_toolbar_submenu a span
 {
     text-indent:-7777px;
@@ -762,4 +769,8 @@ a#closeBut strong
 a#closeBut:hover strong
 {
     background-position:-210px -188px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6

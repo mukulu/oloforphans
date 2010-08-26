@@ -3,6 +3,11 @@ select[name="plugins"] {
 }
 
 .plugin-holder-nopage{
+<<<<<<< HEAD
+=======
+    border-bottom: 0px;
+    margin-bottom: 0px;
+>>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
 }
 
 .plugin-holder-config{
