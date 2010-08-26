@@ -1,0 +1,7 @@
+oloforphans installation
+Dependences
+	* django 1.2
+	* django-cms
+	* mysql
+	* mysqldb
+	* apache2
