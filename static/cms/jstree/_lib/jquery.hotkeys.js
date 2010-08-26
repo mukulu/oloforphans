@@ -43,31 +43,18 @@ Usage:
         opt = jQuery.extend( opt , defaults, options || {} );
         combi = combi.toLowerCase();        
         
-<<<<<<< HEAD
         // inspect if key keystroke matches 
-=======
-        // inspect if key keystroke matches 
->>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
         var inspector = function(event) {
             event = jQuery.event.fix(event); // jQuery event normalization.
             var element = event.target;
             // @ TextNode -> nodeType == 3
             element = (element.nodeType==3) ? element.parentNode : element;
-<<<<<<< HEAD
             
             if(opt['disableInInput']) { // Disable shortcut keys in Input, Textarea fields
                 var target = jQuery(element);
                 if( target.is("input") || target.is("textarea")){
                     return;
                 }
-=======
-            
-            if(opt['disableInInput']) { // Disable shortcut keys in Input, Textarea fields
-                var target = jQuery(element);
-                if( target.is("input") || target.is("textarea")){
-                    return;
-                }
->>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
             }
             var code = event.which,
                 type = event.type,
@@ -86,11 +73,7 @@ Usage:
                 while (!that.all[element] && element.parentNode){
                     element = element.parentNode;
                 }
-<<<<<<< HEAD
             }
-=======
-            }
->>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
             
             var cbMap = that.all[element].events[type].callbackMap;
             if(!shift && !ctrl && !alt) { // No Modifiers
@@ -111,11 +94,7 @@ Usage:
                     event.stopPropagation();
                     event.preventDefault();
                     return false;
-<<<<<<< HEAD
                 }
-=======
-                }
->>>>>>> cf450579b98693d8f8b89011abc39ce3e39311b6
             }
 		};        
         // first hook for this element

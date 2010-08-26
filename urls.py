@@ -1,10 +1,8 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
-
 from cms.sitemaps import CMSSitemap
 from apps.news import urls as news_urls
-
 admin.autodiscover()
 
 urlpatterns = patterns('',
