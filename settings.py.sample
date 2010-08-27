@@ -116,6 +116,13 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'oloforphans.urls'
 
+CMS_APPLICATIONS_URLS = (
+    ('cmsplugin_news.urls','News'),
+)
+CMS_NAVIGATION_EXTENDERS = (
+    ('cmsplugin_news.navigation.get_nodes','News navigation'),
+)
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -135,6 +142,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'cms.context_processors.media',
+    'image_filer.context_processors.media',
 )
 
 INSTALLED_APPS = (
@@ -164,5 +172,7 @@ INSTALLED_APPS = (
     'mptt',
     'publisher',
     'menus',
+    'cmsplugin_news',
+    #'image_filer',
     #'south',
 )
