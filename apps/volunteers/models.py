@@ -27,7 +27,7 @@ class Volunteer(models.Model):
     application_date = models.DateTimeField(default = datetime.now,auto_now=True)
     
     class Meta:
-        ordering = ['-date_registered']
+        ordering = ['-application_date']
     
     def __unicode__(self):
         return '%s %s' % (self.first_name, self.last_name)
@@ -41,7 +41,7 @@ class VolunteerProfile(models.Model):
     volunteering_startdate = models.DateField(help_text='Ideal date to start volunteering at Bethsaida')
     volunteering_enddate = models.DateField(help_text='Ideal date to end volunteering at Bethsaida')
     preferred_weeks = models.IntegerField()
-    flexibility = models.CharField(help_text='How flexible are you regarding these dates')
+    flexibility = models.CharField(max_length=128,help_text='How flexible are you regarding these dates')
     volunteering_reasons = models.TextField(help_text='Reasons for wanting to volunteer')
     previous_education = models.TextField()
     previous_employment = models.TextField(help_text='Previous employment and work/travel')
