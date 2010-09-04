@@ -40,7 +40,7 @@ Inspired By: Sliding Login Panel with jQuery from http://web-kreation.com/index.
 
 #topbar .topbox{
 	display:block;
-	float:left;
+	float:right;
 	width:270px;
 	margin:0 30px 0 0;
 	padding:15px;

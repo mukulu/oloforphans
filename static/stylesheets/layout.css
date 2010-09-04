@@ -73,6 +73,35 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col5, .col5 a{color:#666666; background-color:#1B1B1B;}
 
 /* ----------------------------------------------Generalise-------------------------------------*/
+/* Navigation language */
+#nav_lang{
+	float:right;
+}
+#nav_lang ul, #nav_lang li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#nav_lang li{display:block;float:left;}
+#nav_lang a{
+	display:block;
+	float:left;
+	padding:2px 5px;
+	border-left:1px solid #E0E0E0;
+	color:#f0ebe2;
+	text-decoration:none;
+	font-size:12px;
+}
+#nav_lang a:hover{
+	color:#5B80B2;
+}
+#nav_lang a.selected{
+	color:#5B80B2;
+	font-weight:bold;
+}
+#nav_lang li:first-child a{
+	border-left:none;
+}
 
 #header, #topbar, #topnav, #breadcrumb, #homecontent, #container, #footer, #copyright{
 	position:relative;
