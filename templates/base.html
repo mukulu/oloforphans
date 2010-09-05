@@ -88,31 +88,16 @@
       <h1><a href="#">Bethsaida Girls Sec. School</a></h1>
       <p>Olof Palme Orphans Education Centre</p>
     </div>
-    <div id="nav_main" class="clearfix">
-        {% spaceless %}
-        <ul> 
-             {% show_menu 0 0 100 100 %}
-        </ul>
-        {% endspaceless %}
-    </div>
     <div id="topnav">
         {% spaceless %}
 				<ul> 
 					 {% show_menu 0 0 100 100 %}
 				</ul>
         {% endspaceless %}
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="style-demo.html">Style Demo</a></li>
-            <li><a href="full-width.html">Full Width</a></li>
-            <li><a href="#">Link Text</a></li>
-            <li class="last"><a href="#">A Long Link Text</a></li>
-        </ul>
     </div>
     <br class="clear" />
   </div>
 </div>
-{% block content %}
     <!-- ####################################################################################################### -->
     <!-- Site map of path of the current location -->
     <div class="wrapper col2">
@@ -120,19 +105,10 @@
         <ul class="breadcrumb clearfix">
 			{% show_breadcrumb %}
         </ul>
-        <ul>
-          <li class="first">You Are Here</li>
-          <li>&#187;</li>
-          <li><a href="#">Home</a></li>
-          <li>&#187;</li>
-          <li><a href="#">Grand Parent</a></li>
-          <li>&#187;</li>
-          <li><a href="#">Parent</a></li>
-          <li>&#187;</li>
-          <li class="current"><a href="#">Child</a></li>
-        </ul>
       </div>
     </div>
+
+{% block content %}
     <!-- ####################################################################################################### -->
     <!-- Top Content section -->
     <div class="wrapper col3">
