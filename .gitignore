@@ -4,3 +4,5 @@
 settings.py
 static/photos/*
 *.~
+static/cms_page_media/*
+static/photos/*

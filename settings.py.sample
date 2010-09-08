@@ -134,6 +134,7 @@ CMS_TEMPLATES = (
 	('base.html', gettext('default')),
 	('2col.html', gettext('2 Column')),
 	('3col.html', gettext('3 Column')),
+    ('sampleTemp.html',gettext('Sample template')),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -153,8 +154,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.sitemaps',
-    #'apps.news',
-    #'apps.pages',
     'apps.students',
     'apps.school_classes',
     'apps.volunteers',
@@ -173,6 +172,16 @@ INSTALLED_APPS = (
     'publisher',
     'menus',
     'cmsplugin_news',
-    #'image_filer',
-    #'south',
 )
+
+CMS_SOFTROOT = True
+CMS_MODERATOR = True
+CMS_PERMISSION = True
+CMS_REDIRECTS = True
+CMS_SEO_FIELDS = True
+CMS_FLAT_URLS = False
+CMS_MENU_TITLE_OVERWRITE = True
+CMS_HIDE_UNTRANSLATED = False
+CMS_URL_OVERWRITE = True
+
+SOUTH_TESTS_MIGRATE = False
