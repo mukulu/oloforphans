@@ -41,11 +41,7 @@ class VolunteerProfile(models.Model):
     volunteering_startdate = models.DateField(help_text='Ideal date to start volunteering at Bethsaida')
     volunteering_enddate = models.DateField(help_text='Ideal date to end volunteering at Bethsaida')
     preferred_weeks = models.IntegerField()
-<<<<<<< HEAD
-    flexibility = models.TextField(help_text='How flexible are you regarding these dates')
-=======
     flexibility = models.CharField(max_length=128,help_text='How flexible are you regarding these dates')
->>>>>>> 06cfb74a736349a4458273a93f57af7e562ea741
     volunteering_reasons = models.TextField(help_text='Reasons for wanting to volunteer')
     previous_education = models.TextField()
     previous_employment = models.TextField(help_text='Previous employment and work/travel')
