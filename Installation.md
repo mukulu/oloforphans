@@ -1,7 +1,5 @@
 #OLOFORPHANS INSTALLATION
-
 #Oloforphans is django-cms powered, requires all requirements for django-cms installed.
-
 #[Dependencies]
 
 	- Django 1.2
@@ -11,7 +9,6 @@
 	- Django-south (optional)
 
 #[Installation]
-
 ##Make sure you have python 2.4 or higher installed.
 
 ###1. Download and install tarball Django 1.2 or higher from [Django website](http://www.djangoproject.com/download/1.2.1/tarball/) 
